@@ -8,7 +8,7 @@ loc = input("Enter job location: ")
 j_dict = {'q': input_field, 'l': loc}
 print("processing your request...")
 r1 = requests.get('https://in.indeed.com/jobs', params=j_dict)
-print(r1.url)
+print("processing url:",r1.url)
 html_text = requests.get(r1.url).text
 soup = BeautifulSoup(html_text, 'lxml')
 jobs = soup.find_all('span', class_ = 'company')
