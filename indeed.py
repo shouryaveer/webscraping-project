@@ -12,7 +12,7 @@ print("processing url:",r1.url)
 html_text = requests.get(r1.url).text
 soup = BeautifulSoup(html_text, 'lxml')
 jobs = soup.find_all('span', class_ = 'company')
-
+print("******************************************************************")
 print("Companies with job openings for {} jobs at {}:".format(j_dict['q'], j_dict['l']))
 for job in jobs:
     j_str = job.text
