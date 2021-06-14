@@ -3,7 +3,7 @@ import requests
 import lxml
 
 print("****Welcome to Quick Job Search****")
-platform = input("Which job portal you want to search?\nPress 1 for LinkedIn,\nPress 2 for Indeed: ")
+platform = input("Which job portal you want to search?\nPress 1 for LinkedIn,\nPress 2 for Indeed\n: ")
 input_field = input("Enter job title: ")
 loc = input("Enter job location: ")
 if platform == '1':
