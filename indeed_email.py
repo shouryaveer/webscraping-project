@@ -31,6 +31,6 @@ with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
     subject = 'Your List of companies with Job openings'
     body = "Here's your List of companies for {} job openings at {}:\n\n".format(j_dict['q'], j_dict['l']) + '\n'.join(j)
     msg = "Subject: {}\n\n{}".format(subject, body)
-    smtp.sendmail(email_id, 'shouryaveermehta98@gmail.com', msg)
+    smtp.sendmail(email_id, email_id, msg)
 
 print("Email sent successfully. Check your inbox.")
