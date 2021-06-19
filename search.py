@@ -13,7 +13,7 @@ if platform == '1':
     print("processing url:",r1.url)
     html_text = requests.get(r1.url).text
     soup = BeautifulSoup(html_text, 'lxml')
-    jobs = soup.find_all('a', class_ = 'job-search-card__subtitle')
+    jobs = soup.find_all('h4', class_ = 'base-search-card__subtitle')
 else:
     j_dict = {'q': input_field, 'l': loc}
     print("processing your request...")
